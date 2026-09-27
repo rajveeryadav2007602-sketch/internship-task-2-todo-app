@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <meta name="description" content="A simple, thoughtful to-do list that keeps your tasks saved on this device.">
+  <title>Daymark — To-do list</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Daymark home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>daymark<span class="brand-period">.</span></span></a>
+      <div class="local-badge"><span class="status-dot" aria-hidden="true"></span> Saved on this device</div>
+    </header>
+    <section class="intro" aria-labelledby="page-title"><p class="eyebrow"><span class="sun-icon" aria-hidden="true">✳</span> YOUR SPACE TO FOCUS</p><h1 id="page-title">Make room for<br><span>what matters.</span></h1><p class="intro-copy">A little progress, one task at a time.</p></section>
+    <section class="board" aria-label="To-do list">
+      <form class="add-form" id="task-form"><label class="sr-only" for="task-input">Add a new task</label><span class="input-plus" aria-hidden="true">＋</span><input id="task-input" name="task" type="text" maxlength="160" placeholder="What needs doing?" autocomplete="off" required><button class="add-button" type="submit"><span class="button-label">Add task</span><span class="button-arrow" aria-hidden="true">↗</span></button></form>
+      <div class="list-toolbar"><div class="list-heading"><h2>Your tasks</h2><span class="count-pill" id="task-count">0</span></div><div class="filters" role="group" aria-label="Filter tasks"><button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button><button class="filter-button" type="button" data-filter="active" aria-pressed="false">Active</button><button class="filter-button" type="button" data-filter="completed" aria-pressed="false">Done</button></div></div>
+      <ul class="task-list" id="task-list" aria-label="Tasks"></ul><div class="empty-state" id="empty-state"><div class="empty-art" aria-hidden="true"><span class="empty-spark">✳</span><span class="empty-check">✓</span></div><p class="empty-title">A clear page.</p><p class="empty-copy">Add a task above and get your day moving.</p></div><div class="list-footer"><span id="remaining-copy">Nothing on your list yet</span><button class="clear-button" id="clear-completed" type="button" hidden>Clear completed</button></div>
+    </section>
+    <footer class="page-footer"><span>Small steps count.</span><span class="footer-star" aria-hidden="true">✳</span><span>Made for your next thing</span></footer><p class="sr-only" id="live-region" aria-live="polite" aria-atomic="true"></p>
+  </main>
+</body>
+</html>
